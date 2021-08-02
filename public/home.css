@@ -1,0 +1,24 @@
+body {
+    background-color: #f0f5fc;
+}
+
+#header {
+  opacity: 0.75;
+  background-color: blueviolet;
+  padding: 20px 45px;
+  /*margin: 35px;*/
+  text-align: left;
+}
+
+#colorHeader {
+    opacity: 0.85;
+    background-color:#3c40fa;
+    padding: 10px 35px;
+}
+
+h1 {
+    opacity: 1;
+    color: white;
+    font-family: "Verdana";
+    font-size: 30px;
+}
