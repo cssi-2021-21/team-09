@@ -22,3 +22,24 @@ h1 {
     font-family: "Verdana";
     font-size: 30px;
 }
+
+.text-section {
+  background-color: pink;
+  padding: 20px 45px;
+  margin: 35px;
+  text-align: center;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
