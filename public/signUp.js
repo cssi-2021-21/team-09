@@ -11,7 +11,7 @@ const signIn = () => {
 
     // The signed-in user info.
     var user = result.user;
-    window.location = 'writeNote.html';
+    window.location = 'homePg.html';
   }).catch((error) => {
     // Handle Errors here.
     var errorCode = error.code;
