@@ -1,16 +1,28 @@
-.hero-body {
-  background-color: #DAD8DB;
-  padding: 20px 45px;
-  margin: 35px;
+body {
+  background-color: #f0f5fc;
   text-align: center;
-  border-radius: 50px;
 }
 
-#login-section{
-    background-color: blueviolet;
-    border-radius: 50px;
+h1 {
+    font-family: "Verdana";
+    font-size: 30px;
+    font-style: oblique; 
 }
 
-body{
-    background-color: black;
+h2 {
+    font-family: "Lucida Console";
+    font-size: 18px;
+    padding: 5px;
+}
+
+#top {
+  opacity: 0.75;
+  background-color: blueviolet;
+  padding: 15px;
+}
+
+#bottom {
+  opacity: 0.75;
+  background-color: blueviolet;
+  padding: 15px;
 }
