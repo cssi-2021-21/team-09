@@ -11,3 +11,14 @@ window.onload = (event) => {
     }
   });
 };
+
+const onSubmit = () => {
+  console.log("submit button clicked");
+  const title = document.querySelector("#search");
+  console.log(title.value)
+  firebase
+    .database()
+    .ref()
+    .push(title);
+};
+  
