@@ -18,16 +18,31 @@ body {
 
 h1 {
     opacity: 1;
-    color: white;
+    color: #f0f5fc;
     font-family: "Verdana";
     font-size: 30px;
 }
 
+h2 {
+    color: #3c40fa;
+    font-family: "Verdana";
+    font-size: 20px;
+}
+
+#break {
+    background-color: #f0f5fc;
+    padding : 30px;
+}
+
 .text-section {
-  background-color: pink;
-  padding: 20px 45px;
-  margin: 35px;
-  text-align: center;
+  background-color: #c4c9cf;
+  padding: 10px 45px;
+  opacity: 0.75;
+}
+
+img {
+    max-width:35%;
+    height: 150px;
 }
 
 /* Three image containers (use 25% for four, and 50% for two, etc) */
