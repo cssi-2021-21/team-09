@@ -26,9 +26,10 @@ const onSubmit = () => {
     .then(myJson => {
     console.log(myJson)
 
-    const imgUrl = `https://openlibrary.org${myJson.docs[0].key}`;
+    const imgUrl = `http://covers.openlibrary.org/b/isbn/${myJson.docs[0].isbn[0]}-L.jpg`;
     console.log(imgUrl);
     const imageHolder = document.querySelector("#imageholder");
     imageHolder.innerHTML = `<img src="${imgUrl}" />`
     })};
 
+    //https://openlibrary.org${myJson.docs[0].key}
