@@ -1,3 +1,5 @@
+console.log("I'm working!")
+
 let googleUser;
 
 window.onload = (event) => {
@@ -15,7 +17,7 @@ window.onload = (event) => {
 
 const onSubmit = () => {
   console.log("submit button clicked");
-  const urlToFetch = `http://openlibrary.org/search.json?title=the+lord+of+the+rings`
+  const urlToFetch = `https://openlibrary.org/search.json?title=the+lord+of+the+rings`
   const title = document.querySelector("#search");
   console.log(title.value)
 
