@@ -16,6 +16,10 @@ body {
     padding: 10px 35px;
 }
 
+#searcharea {
+  padding: 20px 45px;
+}
+
 h1 {
     opacity: 1;
     color: #f0f5fc;
@@ -29,7 +33,7 @@ h2 {
     font-size: 20px;
 }
 
-#break {
+.break {
     background-color: #f0f5fc;
     padding : 30px;
 }
