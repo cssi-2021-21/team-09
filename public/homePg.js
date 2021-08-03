@@ -17,10 +17,14 @@ window.onload = (event) => {
 
 const onSubmit = () => {
   console.log("submit button clicked");
-  const urlToFetch = `https://openlibrary.org/search.json?title=the+lord+of+the+rings`
   const title = document.querySelector("#search");
 
+  ntitle = title.value.split(' ').join('+');
+    console.log(ntitle);
+
  console.log(title.value);
+
+ const urlToFetch = `https://openlibrary.org/search.json?title=${ntitle}`
 
    fetch(urlToFetch)
     .then(response => response.json())
@@ -32,8 +36,7 @@ const onSubmit = () => {
     const imageHolder = document.querySelector("#imageholder");
     imageHolder.innerHTML = `<img src="${imgUrl}" />`
 
-    ntitle = title.value.split(' ').join('+');
-    console.log(ntitle);
+    
 
 
     })};
