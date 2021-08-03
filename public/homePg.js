@@ -25,5 +25,10 @@ const onSubmit = () => {
     .then(response => response.json())
     .then(myJson => {
     console.log(myJson)
+
+    const imgUrl = `https://openlibrary.org${myJson.docs[0].key}`;
+    console.log(imgUrl);
+    const imageHolder = document.querySelector("#imageholder");
+    imageHolder.innerHTML = `<img src="${imgUrl}" />`
     })};
 
