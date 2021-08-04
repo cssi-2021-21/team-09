@@ -42,6 +42,8 @@ const onSubmit = () => {
                     <p>${myJson.docs[i].title}</p>
                 </button>
             </section>
+            <section class="break">
+            </section>
             `
             }
         }
