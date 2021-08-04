@@ -129,3 +129,12 @@ h2 {
   color:#ffffff;
   text-decoration: none;
  }
+
+ .button{
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
