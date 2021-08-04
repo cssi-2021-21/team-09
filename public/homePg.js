@@ -37,7 +37,7 @@ const onSubmit = () => {
             const imageHolder = document.querySelector("#imageholder");
             imageHolder.innerHTML += `
             <section>
-                 <button class="results" onclick="descript(i)">
+                 <button class="button results" onclick="descript(i)">
                     <img class="res" src="${imgUrl}" />
                     <p>${myJson.docs[i].title}</p>
                 </button>
