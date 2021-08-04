@@ -44,12 +44,25 @@ h2 {
   opacity: 0.75;
 }
 
-img {
+.prev {
     max-width:35%;
     height: 150px;
 }
 
+.sect {
+    margin: 35px;
+    background-color: #c4c9cf;
+    padding: 10px;
+}
 
+/**.res {
+    max-width:50%;
+    height: 150px;
+}*/
+
+.results {
+    padding: 50px 400px;
+}
 
 /* Three image containers (use 25% for four, and 50% for two, etc) */
 .column {

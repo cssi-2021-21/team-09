@@ -22,23 +22,35 @@ const onSubmit = () => {
   ntitle = title.value.split(' ').join('+');
     console.log(ntitle);
 
- console.log(title.value);
+    console.log(title.value);
 
- const urlToFetch = `https://openlibrary.org/search.json?title=${ntitle}`
+    const urlToFetch = `https://openlibrary.org/search.json?title=${ntitle}`
 
    fetch(urlToFetch)
     .then(response => response.json())
     .then(myJson => {
     console.log(myJson)
-
-    const imgUrl = `http://covers.openlibrary.org/b/isbn/${myJson.docs[0].isbn[0]}-L.jpg`;
-    console.log(imgUrl);
-    const imageHolder = document.querySelector("#imageholder");
-    imageHolder.innerHTML = `<img src="${imgUrl}" />`
-
+    
+        for (let i=0; i < 5 && i < myJson.docs.length; i++) {
+            if (myJson.docs[i].isbn != undefined) {
+            const imgUrl = `https://covers.openlibrary.org/b/isbn/${myJson.docs[i].isbn[0]}-L.jpg`;
+            const imageHolder = document.querySelector("#imageholder");
+            imageHolder.innerHTML += `
+            <section>
+                 <button class="results" onclick="descript(i)">
+                    <img class="res" src="${imgUrl}" />
+                    <p>${myJson.docs[i].title}</p>
+                </button>
+            </section>
+            `
+            }
+        }
     
 
+     })};
 
-    })};
+     const descript = (num) => {
+
+     }
 
     //https://openlibrary.org${myJson.docs[0].key}
