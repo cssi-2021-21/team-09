@@ -138,3 +138,23 @@ h2 {
     height: 50px;
     text-align: center;
 }
+
+
+label.field
+{
+    text-align:left;
+    font-size: 40px;
+    color: black;
+    width:1000px;
+    float:left;
+    clear:both;/*forces fields under eachother in FF*/
+}
+
+.pCalendarContainer > img
+{
+    margin-left:5px;
+    float:left;
+    width:300px;
+    height:300px;
+    vertical-align:middle;
+}
