@@ -35,11 +35,13 @@ const onSubmit = () => {
             if (myJson.docs[i].isbn != undefined) {
             const imgUrl = `https://covers.openlibrary.org/b/isbn/${myJson.docs[i].isbn[0]}-L.jpg`;
             const imageHolder = document.querySelector("#imageholder");
+            const atitle = myJson.docs[i].title;
+            const akey = myJson.docs[i].key; 
             imageHolder.innerHTML += `
             <section>
-                 <button class="button results" onclick="descript(i)">
+                 <button class="button results" onclick="descript(${i}, '${atitle}', '${imgUrl}', '${akey}')">
                     <img class="res" src="${imgUrl}" />
-                    <p>${myJson.docs[i].title}</p>
+                    <p>${atitle}</p>
                 </button>
             </section>
             <section class="break">
@@ -51,8 +53,37 @@ const onSubmit = () => {
 
      })};
 
-     const descript = (num) => {
+     const descript = (num, atitle, imgUrl, akey) => {
+         let redModal = document.getElementById('redModal');
+         redModal.classList.toggle('is-active');
+         const mtitle = document.querySelector("#mtitle");
+         mtitle.innerHTML = `${atitle}`
+         const mimage = document.querySelector("#mimage");
+         mimage.innerHTML = `
+         <img src="${imgUrl}"/>`
+         const mbody = document.querySelector("#mbody");
 
+         const url = `https://openlibrary.org${akey}.json`
+
+         fetch(url)
+        .then(response => response.json())
+        .then(aJson => {
+         console.log(aJson)
+
+         const text  = aJson.description.value;
+         mbody.innerHTML = `
+         <p>${text}</p>
+         <button class="button" onclick="checkOut(${num}, '${atitle}', '${imgUrl}', '${akey}')">Check Out</button>
+         `
+        })
      }
 
-    //https://openlibrary.org${myJson.docs[0].key}
+     const closeRedModal = () => {
+        let redModal = document.getElementById('redModal');
+        redModal.classList.toggle('is-active'); 
+    }
+
+     const checkOut = (num, atitle, imgUrl, akey) => {
+
+     }     
+
