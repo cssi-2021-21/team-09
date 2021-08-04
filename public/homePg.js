@@ -16,6 +16,7 @@ window.onload = (event) => {
 
 
 const onSubmit = () => {
+
   console.log("submit button clicked");
   const title = document.querySelector("#search");
 
@@ -39,7 +40,7 @@ const onSubmit = () => {
             const akey = myJson.docs[i].key; 
             imageHolder.innerHTML += `
             <section>
-                 <button class="button results" onclick="descript(${i}, '${atitle}', '${imgUrl}', '${akey}')">
+                 <button class="button results" onclick="descript(${i}, '${atitle.replace(/'/g, "\\'")}', '${imgUrl}', '${akey}')">
                     <img class="res" src="${imgUrl}" />
                     <p>${atitle}</p>
                 </button>
@@ -73,7 +74,7 @@ const onSubmit = () => {
          const text  = aJson.description.value;
          mbody.innerHTML = `
          <p>${text}</p>
-         <button class="button" onclick="checkOut(${num}, '${atitle}', '${imgUrl}', '${akey}')">Check Out</button>
+         <button class="button" onclick="checkOut(${num}, '${atitle.replace(/'/g, "\\'")}', '${imgUrl}', '${akey}')">Check Out</button>
          `
         })
      }
@@ -84,6 +85,18 @@ const onSubmit = () => {
     }
 
      const checkOut = (num, atitle, imgUrl, akey) => {
+         const payload = {
+            number: num,
+            title: atitle,
+            image: imgUrl,
+            key: akey
+        };
 
+        firebase
+        .database()
+        .ref(`users/${googleUser.uid}`)
+        .push(payload);
+
+        console.log("Submitted!")
      }     
 
