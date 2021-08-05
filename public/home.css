@@ -13,7 +13,9 @@ body {
 #colorHeader {
     opacity: 0.85;
     background-color:#3c40fa;
+    color: #d6c3e6;
     padding: 10px 35px;
+    font-size: 25px;
 }
 
 #searcharea {
