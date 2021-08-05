@@ -41,7 +41,6 @@ const onSubmit = () => {
             imageHolder.innerHTML += `
             <section>
                  <button class="button results" onclick="descript(${i}, '${atitle.replace(/'/g, "\\'")}', '${imgUrl}', '${akey}')">
-                    <img class="res" src="${imgUrl}" />
                     <p>${atitle}</p>
                 </button>
             </section>
