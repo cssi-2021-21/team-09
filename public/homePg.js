@@ -16,6 +16,8 @@ window.onload = (event) => {
 
 
 const onSubmit = () => {
+    const imageHolder = document.querySelector("#imageholder");
+    imageHolder.innerHTML = ``;
 
   console.log("submit button clicked");
   const title = document.querySelector("#search");
@@ -35,7 +37,7 @@ const onSubmit = () => {
         for (let i=0; i < 5 && i < myJson.docs.length; i++) {
             if (myJson.docs[i].isbn != undefined) {
             const imgUrl = `https://covers.openlibrary.org/b/isbn/${myJson.docs[i].isbn[0]}-L.jpg`;
-            const imageHolder = document.querySelector("#imageholder");
+            
             const atitle = myJson.docs[i].title;
             const akey = myJson.docs[i].key; 
             imageHolder.innerHTML += `
@@ -69,8 +71,14 @@ const onSubmit = () => {
         .then(response => response.json())
         .then(aJson => {
          console.log(aJson)
+            let text;
 
-         const text  = aJson.description.value;
+         if (!aJson.description.value) {
+            text  = aJson.description;
+         }
+         else { 
+            text  = aJson.description.value;
+         }
          mbody.innerHTML = `
          <p>${text}</p>
          <button class="button" onclick="checkOut(${num}, '${atitle.replace(/'/g, "\\'")}', '${imgUrl}', '${akey}')">Check Out</button>
