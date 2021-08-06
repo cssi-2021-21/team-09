@@ -8,6 +8,7 @@ body {
   padding: 20px 45px;
   /*margin: 35px;*/
   text-align: left;
+  font-family: 'poppins-bold', sans-serif !important;
 }
 
 #colorHeader {
@@ -16,6 +17,7 @@ body {
     color: #d6c3e6;
     padding: 10px 35px;
     font-size: 25px;
+    font-family: 'poppins-bold', sans-serif !important;
 }
 
 #searcharea {
@@ -25,13 +27,13 @@ body {
 h1 {
     opacity: 1;
     color: #f0f5fc;
-    font-family: "Verdana";
+    font-family: 'poppins-bold', sans-serif !important;
     font-size: 30px;
 }
 
 h2 {
     color: #3c40fa;
-    font-family: "Verdana";
+    font-family: 'poppins-bold', sans-serif !important;
     font-size: 20px;
 }
 
@@ -83,6 +85,7 @@ h2 {
 #label{
     color: black;
     font-size: 30px;
+    font-family: 'poppins-bold', sans-serif !important;
 }
 
 .logo {
@@ -103,10 +106,12 @@ h2 {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  font-family: 'poppins-bold', sans-serif !important;
 }
 
 .nav {
   font-size: 16px;
+  font-family: 'poppins-bold', sans-serif !important;
 }
 
 .nav a {
@@ -116,6 +121,7 @@ h2 {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
+  font-family: 'poppins-bold', sans-serif !important;
 }
 
 .nav a:hover {
@@ -137,6 +143,7 @@ h2 {
 
 label.field
 {
+    font-family: 'poppins-bold', sans-serif !important;
     text-align:left;
     font-size: 40px;
     color: black;
@@ -152,6 +159,7 @@ label.field
     width:300px;
     height:300px;
     vertical-align:middle;
+    font-family: 'poppins-bold', sans-serif !important;
 }
 
  .button{
@@ -162,6 +170,7 @@ label.field
     height: 50px;
     text-align: center;
     float: center;
+    font-family: 'poppins-bold', sans-serif !important;
 }
 
 #submit{
@@ -173,8 +182,16 @@ label.field
     text-align: center;
     float: center;
     margin: 0;
+    font-family: 'poppins-bold', sans-serif !important;
   
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+#done{
+    text-align: center;
+    color: #595bf6;
+    font-size: 70px;
+    font-family: 'poppins-bold', sans-serif !important;
 }
